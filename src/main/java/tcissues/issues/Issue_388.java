@@ -15,19 +15,8 @@ import totalcross.ui.gfx.Color;
 
 public class Issue_388 extends BaseIssue {
 
-	@Override
-	public String getIssueName() {
-		return "TC5 issue with screen rotation";
-	}
-
-	@Override
-	public String getIssueNickname() {
-		return getIssueName();
-	}
-
-	@Override
-	public int getIssueNumber() {
-		return 388;
+	public Issue_388() {
+		super("TC5 issue with screen rotation", "Screen Rotation NPE", 388);
 	}
 
 	@Override

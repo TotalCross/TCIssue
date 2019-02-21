@@ -11,19 +11,14 @@ import totalcross.ui.icon.Icon;
 import totalcross.ui.icon.MaterialIcons;
 
 public abstract class BaseIssue {
-	public abstract String getIssueName();
-
-	public abstract String getIssueNickname();
-
-	public abstract int getIssueNumber();
-
-	public String getIssuePresentableName() {
-		String name = "#" + getIssueNumber() + " - " + getIssueName();
-		if (name.length() > 30) {
-			name = name.substring(0, 27) + "...";
-		}
-
-		return name;
+	private String name;
+	private String nickname;
+	private int number;
+	
+	public BaseIssue(String name, String nickname, int number) {
+		this.name = name;
+		this.nickname = nickname;
+		this.number = number;
 	}
 
 	protected abstract Container InitIssue();
@@ -46,5 +41,26 @@ public abstract class BaseIssue {
 			}
 		});
 		mw.popup();
+	}
+	
+	public String getIssueName() {
+		return name;
+	}
+
+	public String getIssueNickname() {
+		return nickname;
+	}
+
+	public int getIssueNumber() {
+		return number;
+	}
+
+	public String getIssuePresentableName() {
+		String name = "#" + getIssueNumber() + " - " + getIssueName();
+		if (name.length() > 30) {
+			name = name.substring(0, 27) + "...";
+		}
+
+		return name;
 	}
 }
