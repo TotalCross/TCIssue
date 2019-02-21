@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 import tcissues.issues.Issue_369;
+import tcissues.issues.Issue_378;
+import tcissues.issues.Issue_379;
+import tcissues.issues.Issue_380;
+import tcissues.issues.Issue_381;
 import tcissues.issues.Issue_388;
 import tcissues.resources.Colors;
 import tcissues.resources.Exec;
@@ -24,6 +28,10 @@ public class TCIssuesHome extends Container {
 	public TCIssuesHome() {
 		issues = new ArrayList<BaseIssue>();
 		issues.add(new Issue_369());
+		issues.add(new Issue_378());
+		issues.add(new Issue_379());
+		issues.add(new Issue_380());
+		issues.add(new Issue_381());
 		issues.add(new Issue_388());
 		
 		issues.sort(new Comparator<BaseIssue>() {
