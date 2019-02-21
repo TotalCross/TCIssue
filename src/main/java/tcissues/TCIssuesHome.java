@@ -73,7 +73,7 @@ public class TCIssuesHome extends Container {
 						style = 6; // material
 					}
 							
-					Control.ResetStyle();
+					Control.resetStyle();
 					MainWindow.getMainWindow().setUIStyle(style);
 				} catch (IOException | ImageException e) {
 					e.printStackTrace();
