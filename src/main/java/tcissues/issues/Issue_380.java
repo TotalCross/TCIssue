@@ -2,9 +2,11 @@ package tcissues.issues;
 
 import tcissues.BaseIssue;
 import tcissues.resources.Colors;
+import tcissues.resources.Images;
 import totalcross.io.IOException;
 import totalcross.ui.Button;
 import totalcross.ui.Container;
+import totalcross.ui.ScrollContainer;
 import totalcross.ui.event.ControlEvent;
 import totalcross.ui.event.PressListener;
 import totalcross.ui.gfx.Color;
@@ -20,30 +22,32 @@ public class Issue_380 extends BaseIssue {
 
 	@Override
 	protected Container InitIssue() {
-		return new Container() {
+		return new ScrollContainer() {
+			Image img;
 			@Override
 			public void initUI() {
-				try {
-					Image img = new Image("images/bt_search.png").getHwScaledInstance(UnitsConverter.toPixels(DP + 18), UnitsConverter.toPixels(DP + 18));
-					Button btn = new Button("Pesquisara", img, LEFT, UnitsConverter.toPixels(DP + 0));
-					btn.setBackForeColors(Color.WHITE, Color.BLACK);
-					add(btn, LEFT, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
+				img = Images.getTotalCrossLogo(DP + 18, DP + 18);
+				AddButtons(LEFT, "Left");
+				AddButtons(RIGHT, "Right");
+				AddButtons(CENTER, "Center");
+				AddButtons(TOP, "Top");
+				AddButtons(BOTTOM, "Bottom");
+			}
+			
+			private void AddButtons(int alignment, String name) {
+				name = name + " aligned text";
+				
+				Button btn = new Button(name, img, alignment, UnitsConverter.toPixels(DP + 4));
+				btn.setBackForeColors(Color.WHITE, Color.BLACK);
+				add(btn, LEFT, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
 
-					Button btn3 = new Button("Pesquisar", img, RIGHT, UnitsConverter.toPixels(DP + 0));
-					btn3.setBackForeColors(Color.WHITE, Color.BLACK);
-					add(btn3, LEFT, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
-
-
-					Button btn2 = new Button("Pesquisar");
-					btn2.setBackForeColors(Color.WHITE, Color.BLACK);
-					add(btn2, LEFT, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
-
-
-				} catch (ImageException e) {
-					e.printStackTrace();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+				Button btn2 = new Button(name, img, alignment, UnitsConverter.toPixels(DP + 4));
+				btn2.setBackForeColors(Color.WHITE, Color.BLACK);
+				add(btn2, LEFT, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
+				
+				Button btn3 = new Button("", img, alignment, UnitsConverter.toPixels(DP + 4));
+				btn3.setBackForeColors(Color.WHITE, Color.BLACK);
+				add(btn3, LEFT, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
 			}
 		};
 	}
