@@ -17,11 +17,9 @@ public class Issue_381 extends BaseIssue {
 
 	@Override
 	protected Container InitIssue() {
-
 		return new Container() {
 			@Override
 			public void initUI() {
-
 				String[] caps = new String[9];
 				for (int i = 0; i < caps.length; i++) {
 					caps[i] = "Aba " + (i + 1);
@@ -35,8 +33,5 @@ public class Issue_381 extends BaseIssue {
 
 			}
 		};
-
 	}
-
-
 }

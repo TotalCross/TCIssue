@@ -20,13 +20,10 @@ public class Issue_380 extends BaseIssue {
 
 	@Override
 	protected Container InitIssue() {
-
 		return new Container() {
 			@Override
 			public void initUI() {
-
 				try {
-
 					Image img = new Image("images/bt_search.png").getHwScaledInstance(UnitsConverter.toPixels(DP + 18), UnitsConverter.toPixels(DP + 18));
 					Button btn = new Button("Pesquisara", img, LEFT, UnitsConverter.toPixels(DP + 0));
 					btn.setBackForeColors(Color.WHITE, Color.BLACK);
@@ -47,12 +44,7 @@ public class Issue_380 extends BaseIssue {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-
-
 			}
 		};
-
 	}
-
-
 }

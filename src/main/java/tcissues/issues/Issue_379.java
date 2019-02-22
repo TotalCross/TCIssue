@@ -25,22 +25,25 @@ public class Issue_379 extends BaseIssue {
 		return new Container() {
 			@Override
 			public void initUI() {
-
-
+				// SetText ANTES do add dá problema
 				Edit editBug = new Edit();
 				editBug.caption = "Dt.Inicial Meta";
 				editBug.setBackForeColors(Color.WHITE, Color.BLACK);
 				editBug.setText("13/02/2019");
 				add(editBug, LEFT + UnitsConverter.toPixels(DP + 40), AFTER, DP + 170, PREFERRED);
 
+				// Sem SetText
 				Edit editNormal = new Edit();
 				editNormal.caption = "Dt.Final Meta";
 				editNormal.setBackForeColors(Color.WHITE, Color.BLACK);
-				add(editNormal, AFTER, SAME, DP + 170, PREFERRED);
-
-
-
-
+				add(editNormal, LEFT, AFTER + 40, DP + 170, PREFERRED);
+				
+				// SetText DEPOIS do add não dá problema
+				Edit setTextDepois = new Edit();
+				setTextDepois.caption = "Dt.Final Meta";
+				setTextDepois.setBackForeColors(Color.WHITE, Color.BLACK);
+				add(setTextDepois, LEFT, AFTER + 40, DP + 170, PREFERRED);
+				setTextDepois.setText("13/02/2019");
 			}
 		};
 
