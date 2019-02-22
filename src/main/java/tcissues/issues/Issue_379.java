@@ -46,8 +46,5 @@ public class Issue_379 extends BaseIssue {
 				setTextDepois.setText("13/02/2019");
 			}
 		};
-
 	}
-
-
 }

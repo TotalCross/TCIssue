@@ -21,13 +21,9 @@ public class Issue_378 extends BaseIssue {
 
 	@Override
 	protected Container InitIssue() {
-
 		return new Container() {
 			@Override
 			public void initUI() {
-
-
-
 				Edit campo1 = new Edit();
 				campo1.setBackForeColors(Color.WHITE, Color.BLACK);
 				campo1.caption = "Campo 1";
