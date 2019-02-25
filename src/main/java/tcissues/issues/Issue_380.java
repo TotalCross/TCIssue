@@ -17,7 +17,7 @@ import totalcross.util.UnitsConverter;
 public class Issue_380 extends BaseIssue {
 
 	public Issue_380() {
-		super("Centralizar Imagem e Texto no Botão", "Button Issues", 380);
+		super("Centralizar Imagem e Texto no Botão", "Button Issues", 380, false);
 	}
 
 	@Override

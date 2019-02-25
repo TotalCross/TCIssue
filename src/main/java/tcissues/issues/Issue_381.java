@@ -12,7 +12,7 @@ import totalcross.ui.gfx.Color;
 public class Issue_381 extends BaseIssue {
 
 	public Issue_381() {
-		super("Distorção no tamanho do botão no TabbedContainer" , "TabbedContainer Issues", 381);
+		super("Distorção no tamanho do botão no TabbedContainer" , "TabbedContainer Issues", 381, true);
 	}
 
 	@Override

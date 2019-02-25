@@ -11,7 +11,7 @@ import totalcross.ui.event.PressListener;
 public class Issue_369 extends BaseIssue {
 
 	public Issue_369() {
-		super("Problem with Popupmenu TC5", "PopupMenu Issues", 369);
+		super("Problem with Popupmenu TC5", "PopupMenu Issues", 369, true);
 	}
 
 	@Override

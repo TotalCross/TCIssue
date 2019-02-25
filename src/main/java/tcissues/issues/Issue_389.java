@@ -8,7 +8,7 @@ import totalcross.ui.Label;
 public class Issue_389 extends BaseIssue{
 
 	public Issue_389() {
-		super("Problema no componente edit no coletor de dados Windows CE", "Edit WinCE", 389);
+		super("Problema no componente edit no coletor de dados Windows CE", "Edit WinCE", 389, true);
 	}
 
 	@Override

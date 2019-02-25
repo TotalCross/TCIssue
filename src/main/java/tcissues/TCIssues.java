@@ -14,7 +14,7 @@ import totalcross.ui.icon.MaterialIcons;
 import totalcross.ui.image.Image;
 import totalcross.ui.image.ImageException;
 
-public class TCIssues  extends MainWindow {
+public class TCIssues extends MainWindow {
 	SideMenuContainer sideMenu;
 	
 	static {

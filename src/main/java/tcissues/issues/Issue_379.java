@@ -16,7 +16,7 @@ import totalcross.util.UnitsConverter;
 public class Issue_379 extends BaseIssue {
 
 	public Issue_379() {
-		super("Efeito estranho ao usar Edit com Caption ", "Edit Issues", 379);
+		super("Efeito estranho ao usar Edit com Caption ", "Edit Issues", 379, false);
 	}
 
 	@Override

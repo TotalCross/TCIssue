@@ -16,7 +16,7 @@ import totalcross.ui.gfx.Color;
 public class Issue_388 extends BaseIssue {
 
 	public Issue_388() {
-		super("TC5 issue with screen rotation", "Screen Rotation NPE", 388);
+		super("TC5 issue with screen rotation", "Screen Rotation NPE", 388, false);
 	}
 
 	@Override

@@ -14,11 +14,13 @@ public abstract class BaseIssue {
 	private String name;
 	private String nickname;
 	private int number;
+	private boolean open;
 	
-	public BaseIssue(String name, String nickname, int number) {
+	public BaseIssue(String name, String nickname, int number, boolean open) {
 		this.name = name;
 		this.nickname = nickname;
 		this.number = number;
+		this.open = open;
 	}
 
 	protected abstract Container InitIssue();
@@ -62,5 +64,9 @@ public abstract class BaseIssue {
 		}
 
 		return name;
+	}
+	
+	public boolean isOpen() {
+		return open;
 	}
 }
