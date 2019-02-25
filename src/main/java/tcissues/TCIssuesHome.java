@@ -97,34 +97,34 @@ public class TCIssuesHome extends ScrollContainer {
 		});
 		add(openIssue, CENTER, AFTER, 280 + DP, 40 + DP);
 		
-		Button changeStyle = new Button("Change Style");
-		changeStyle.setBackForeColors(Colors.BLUE, Colors.WHITE);
-		changeStyle.addPressListener(new PressListener() {
-			@Override
-			public void controlPressed(ControlEvent arg0) {
-				String popdata[] = { "Flat (deprecated)", "Vista (deprecated)", "Android (deprecated)", "Holo", "Material" };
-
-				PopupMenu popmenu;
-				try {
-					popmenu = new PopupMenu("Style", popdata);
-					PopupMenu.cancelString = "cancel";
-					popmenu.enableCancel = true;
-					popmenu.resize();
-					popmenu.popup();
-					
-					byte style = (byte)(popmenu.getSelectedIndex() + 2);
-					if (style < 2 || style > 6) {
-						style = 6; // material
-					}
-							
-					//Control.resetStyle();
-					MainWindow.getMainWindow().setUIStyle(style);
-				} catch (IOException | ImageException e) {
-					e.printStackTrace();
-				}
-			}
-		});
-		add(changeStyle, CENTER, AFTER, 280 + DP, 40 + DP);
+//		Button changeStyle = new Button("Change Style");
+//		changeStyle.setBackForeColors(Colors.BLUE, Colors.WHITE);
+//		changeStyle.addPressListener(new PressListener() {
+//			@Override
+//			public void controlPressed(ControlEvent arg0) {
+//				String popdata[] = { "Flat (deprecated)", "Vista (deprecated)", "Android (deprecated)", "Holo", "Material" };
+//
+//				PopupMenu popmenu;
+//				try {
+//					popmenu = new PopupMenu("Style", popdata);
+//					PopupMenu.cancelString = "cancel";
+//					popmenu.enableCancel = true;
+//					popmenu.resize();
+//					popmenu.popup();
+//					
+//					byte style = (byte)(popmenu.getSelectedIndex() + 2);
+//					if (style < 2 || style > 6) {
+//						style = 6; // material
+//					}
+//							
+//					//Control.resetStyle();
+//					MainWindow.getMainWindow().setUIStyle(style);
+//				} catch (IOException | ImageException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//		add(changeStyle, CENTER, AFTER, 280 + DP, 40 + DP);
 		
 		add(new Label("Open Issues"), CENTER, AFTER + 20);
 		for (BaseIssue issue : issues) {
