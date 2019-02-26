@@ -3,6 +3,9 @@ package tcissues;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+import tcissues.issues.Issue_350;
+import tcissues.issues.Issue_351;
+import tcissues.issues.Issue_357;
 import tcissues.issues.Issue_369;
 import tcissues.issues.Issue_378;
 import tcissues.issues.Issue_379;
@@ -33,6 +36,9 @@ public class TCIssuesHome extends ScrollContainer {
 	
 	public TCIssuesHome() {
 		issues = new ArrayList<BaseIssue>();
+		issues.add(new Issue_350());
+		issues.add(new Issue_351());
+		issues.add(new Issue_357());
 		issues.add(new Issue_369());
 		issues.add(new Issue_378());
 		issues.add(new Issue_379());
