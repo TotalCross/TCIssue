@@ -13,6 +13,7 @@ import tcissues.issues.Issue_380;
 import tcissues.issues.Issue_381;
 import tcissues.issues.Issue_388;
 import tcissues.issues.Issue_389;
+import tcissues.issues.Issue_398;
 import tcissues.issues.Issue_408;
 import tcissues.resources.Colors;
 import tcissues.resources.Exec;
@@ -47,6 +48,7 @@ public class TCIssuesHome extends ScrollContainer {
 		issues.add(new Issue_381());
 		issues.add(new Issue_388());
 		issues.add(new Issue_389());
+		issues.add(new Issue_398());
 		issues.add(new Issue_408());
 		
 		closedIssues = new ArrayList<BaseIssue>();
