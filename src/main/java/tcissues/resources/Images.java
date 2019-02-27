@@ -28,4 +28,17 @@ public final class Images {
 		
 		return img;
 	}
+	
+	private static Image progressBoxGif; 
+	public static Image getprogressBoxGif () {
+		if(progressBoxGif == null) {
+			try {
+				progressBoxGif = new Image("images/progress.gif");
+			} catch (IOException | ImageException e) {
+				e.printStackTrace();
+			}
+		}
+		return progressBoxGif;
+	}
+
 }
