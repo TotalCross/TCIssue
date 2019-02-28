@@ -18,21 +18,6 @@ public class Issue_389 extends BaseIssue {
 			public void initUI() {
 				add(getUsuarioEdit(), CENTER, TOP + 40);
 				add(getSenhaEdit(), CENTER, AFTER + 40);
-				Thread t = new Thread() {
-					@Override
-					public void run() {
-						while (true) {
-							try {
-								Thread.sleep(500);
-							} catch (InterruptedException e) {
-								e.printStackTrace();
-							}
-							System.out.println(Vm.getTimeStamp() + "");
-						}
-					}
-				};
-
-				t.start();
 			}
 		};
 	}

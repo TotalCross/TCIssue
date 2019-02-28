@@ -32,6 +32,8 @@ public class Issue_350 extends BaseIssue {
 
 				chart.series.addElement(new totalcross.ui.chart.Series("nada", new double[] { 10000d }, Color.GREEN));
 				chart.series.addElement(new totalcross.ui.chart.Series("tudo", new double[] { 10d }, Color.RED));
+			
+				add(chart, LEFT, TOP, FILL, FILL);
 			}
 		};
 	};
