@@ -1,7 +1,6 @@
 package tcissues;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 
 import tcissues.issues.Issue_350;
 import tcissues.issues.Issue_351;
@@ -14,14 +13,14 @@ import tcissues.issues.Issue_381;
 import tcissues.issues.Issue_388;
 import tcissues.issues.Issue_389;
 import tcissues.issues.Issue_398;
-import tcissues.issues.Issue_408;
 import tcissues.issues.Issue_402;
+import tcissues.issues.Issue_408;
+import tcissues.issues.Issue_409;
 import tcissues.resources.Colors;
 import tcissues.resources.Exec;
 import tcissues.resources.Images;
 import totalcross.io.IOException;
 import totalcross.ui.Button;
-import totalcross.ui.Container;
 import totalcross.ui.Control;
 import totalcross.ui.ImageControl;
 import totalcross.ui.Label;
@@ -51,8 +50,9 @@ public class TCIssuesHome extends ScrollContainer {
 		issues.add(new Issue_388());
 		issues.add(new Issue_389());
 		issues.add(new Issue_398());
-		issues.add(new Issue_408());
 		issues.add(new Issue_402());
+		issues.add(new Issue_408());
+		issues.add(new Issue_409());
 		
 		closedIssues = new ArrayList<BaseIssue>();
 		for (int i = issues.size() - 1; i >= 0; i--) {
