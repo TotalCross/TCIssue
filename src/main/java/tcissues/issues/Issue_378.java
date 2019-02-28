@@ -50,17 +50,13 @@ public class Issue_378 extends BaseIssue {
 				tc.addPressListener(e -> {
 					if (tc.getActiveTab() > 0 ){
 						if(campo1.getText().length() == 0 || campo2.getText().length() == 0){
-							Toast.show("É necessario preencher os dois campos na primeira aba :D", 2000);
+							// Buggy line
+							//Toast.show("É necessario preencher os dois campos na primeira aba :D", 2000);
 							tc.setActiveTab(0);
 						}
 					}
 				});
-
-
 			}
 		};
-
 	}
-
-
 }
