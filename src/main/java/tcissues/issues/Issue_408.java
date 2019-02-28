@@ -49,9 +49,6 @@ public class Issue_408 extends BaseIssue{
 			}
 		};
 	};
-	
-
-	
 };
 
 

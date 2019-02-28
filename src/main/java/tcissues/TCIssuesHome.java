@@ -15,6 +15,7 @@ import tcissues.issues.Issue_388;
 import tcissues.issues.Issue_389;
 import tcissues.issues.Issue_398;
 import tcissues.issues.Issue_408;
+import tcissues.issues.Issue_409;
 import tcissues.resources.Colors;
 import tcissues.resources.Exec;
 import tcissues.resources.Images;
@@ -27,6 +28,7 @@ import totalcross.ui.Label;
 import totalcross.ui.MainWindow;
 import totalcross.ui.PopupMenu;
 import totalcross.ui.ScrollContainer;
+import totalcross.ui.Window;
 import totalcross.ui.dialog.InputBox;
 import totalcross.ui.event.ControlEvent;
 import totalcross.ui.event.PressListener;
@@ -50,6 +52,7 @@ public class TCIssuesHome extends ScrollContainer {
 		issues.add(new Issue_389());
 		issues.add(new Issue_398());
 		issues.add(new Issue_408());
+		issues.add(new Issue_409());
 		
 		closedIssues = new ArrayList<BaseIssue>();
 		for (int i = issues.size() - 1; i >= 0; i--) {
@@ -107,34 +110,35 @@ public class TCIssuesHome extends ScrollContainer {
 		});
 		add(openIssue, CENTER, AFTER, 280 + DP, 40 + DP);
 		
-//		Button changeStyle = new Button("Change Style");
-//		changeStyle.setBackForeColors(Colors.BLUE, Colors.WHITE);
-//		changeStyle.addPressListener(new PressListener() {
-//			@Override
-//			public void controlPressed(ControlEvent arg0) {
-//				String popdata[] = { "Flat (deprecated)", "Vista (deprecated)", "Android (deprecated)", "Holo", "Material" };
-//
-//				PopupMenu popmenu;
-//				try {
-//					popmenu = new PopupMenu("Style", popdata);
-//					PopupMenu.cancelString = "cancel";
-//					popmenu.enableCancel = true;
-//					popmenu.resize();
-//					popmenu.popup();
-//					
-//					byte style = (byte)(popmenu.getSelectedIndex() + 2);
-//					if (style < 2 || style > 6) {
-//						style = 6; // material
-//					}
-//							
-//					//Control.resetStyle();
-//					MainWindow.getMainWindow().setUIStyle(style);
-//				} catch (IOException | ImageException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//		add(changeStyle, CENTER, AFTER, 280 + DP, 40 + DP);
+		Button changeStyle = new Button("Change Style");
+		changeStyle.setBackForeColors(Colors.BLUE, Colors.WHITE);
+		changeStyle.addPressListener(new PressListener() {
+			@Override
+			public void controlPressed(ControlEvent arg0) {
+				String popdata[] = { "Flat (deprecated)", "Vista (deprecated)", "Android (deprecated)", "Holo", "Material" };
+
+				PopupMenu popmenu;
+				try {
+					popmenu = new PopupMenu("Style", popdata);
+					PopupMenu.cancelString = "cancel";
+					popmenu.enableCancel = true;
+					popmenu.resize();
+					popmenu.popup();
+					
+					byte style = (byte)(popmenu.getSelectedIndex() + 2);
+					if (style < 2 || style > 6) {
+						style = 6; // material
+					}
+							
+					Control.resetStyle();
+					MainWindow.getMainWindow().setUIStyle(style);
+					Window.needsPaint = true;
+				} catch (IOException | ImageException e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		add(changeStyle, CENTER, AFTER, 280 + DP, 40 + DP);
 		
 		add(new Label("Open Issues"), CENTER, AFTER + 20);
 		for (BaseIssue issue : issues) {

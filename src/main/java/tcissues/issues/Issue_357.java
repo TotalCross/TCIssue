@@ -29,6 +29,7 @@ public class Issue_357 extends BaseIssue{
 					txUC.setForeColor(Color.BLACK);
 					txUC.align = RIGHT;
 					add(txUC, RIGHT, TOP, PREFERRED, PREFERRED);
+					
 					Label lbUC = new Label("UC:");
 					lbUC.setForeColor(Color.BLACK);
 					lbUC.align = RIGHT;
