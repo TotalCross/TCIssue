@@ -34,14 +34,14 @@ public class Issue_409 extends BaseIssue {
 				kilometragem.setMode(Edit.CURRENCY, true);
 				kilometragem.alignment = LEFT;
                 add(kilometragem, LEFT, AFTER + 60);
-                kilometragem.setText("64.223,1");
+                kilometragem.setText("64223,1");
                 
                 Edit dinheiro = new Edit();
 				dinheiro.caption = "Reais";
 				dinheiro.setDecimalPlaces(2);
 				dinheiro.setMode(Edit.CURRENCY, true);
                 add(dinheiro, LEFT, AFTER + 60);
-                dinheiro.setText("3,999");
+                dinheiro.setText("9,99");
                 
                 Button b = new Button("Print values");
                 b.addPressListener(new PressListener() {
