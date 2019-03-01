@@ -80,7 +80,7 @@
 								<argument>-android</argument>
 								<argument>-ios</argument>
 								<argument>/n</argument>
-								<argument>TotalCross Issues</argument>
+								<argument>TCIssues</argument>
 								<argument>/p</argument>
 								<argument>/r</argument>
 								<argument>${totalcross.activation_key}</argument>

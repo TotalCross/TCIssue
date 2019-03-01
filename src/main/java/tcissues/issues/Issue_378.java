@@ -16,7 +16,7 @@ import totalcross.util.UnitsConverter;
 public class Issue_378 extends BaseIssue {
 
 	public Issue_378() {
-		super("Repaint no TabContainner ", "TabContainner Issues", 378, true);
+		super("Repaint no TabContainner ", "TabContainner Issues", 378, false);
 	}
 
 	@Override
