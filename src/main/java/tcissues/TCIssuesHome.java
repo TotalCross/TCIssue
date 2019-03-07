@@ -41,6 +41,9 @@ public class TCIssuesHome extends ScrollContainer {
 	
 	public TCIssuesHome() {
 		issues = new ArrayList<BaseIssue>();
+		issues.add(new Issue_336());
+		issues.add(new Issue_346());
+		issues.add(new Issue_347());
 		issues.add(new Issue_350());
 		issues.add(new Issue_351());
 		issues.add(new Issue_357());
@@ -49,6 +52,7 @@ public class TCIssuesHome extends ScrollContainer {
 		issues.add(new Issue_379());
 		issues.add(new Issue_380());
 		issues.add(new Issue_381());
+		issues.add(new Issue_384());
 		issues.add(new Issue_388());
 		issues.add(new Issue_389());
 		issues.add(new Issue_395());
