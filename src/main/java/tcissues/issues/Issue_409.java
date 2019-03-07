@@ -19,14 +19,12 @@ public class Issue_409 extends BaseIssue {
 			public void initUI() {
 				super.initUI(); 
 
-				
 				Edit gasolina = new Edit();
 				gasolina.caption = "Gasolina";
 				gasolina.setDecimalPlaces(3);
 				gasolina.setMode(Edit.CURRENCY, true);
 				gasolina.alignment = LEFT;
                 add(gasolina, LEFT, TOP + 60);
-                gasolina.setText("3,999");
                 
                 Edit kilometragem = new Edit();
 				kilometragem.caption = "Quilometros (Km)";
@@ -42,20 +40,6 @@ public class Issue_409 extends BaseIssue {
 				dinheiro.setMode(Edit.CURRENCY, true);
                 add(dinheiro, LEFT, AFTER + 60);
                 dinheiro.setText("9,99");
-                
-                Button b = new Button("Print values");
-                b.addPressListener(new PressListener() {
-					@Override
-					public void controlPressed(ControlEvent e) {
-						System.out.println("" + gasolina.getValue());
-						System.out.println("" + gasolina.getValueAsInt());
-						System.out.println("" + gasolina.getValueAsFloat());
-						System.out.println("" + gasolina.getValueAsDouble());
-						System.out.println("" + gasolina.getValueAsBigDecimal());
-					}
-				});
-                
-                add(b, LEFT, AFTER + 60, FILL, PREFERRED);
 			}
 		};
 	};
