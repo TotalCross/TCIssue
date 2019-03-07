@@ -12,7 +12,7 @@ import totalcross.util.regex.Pattern;
 
 public class Issue_410 extends BaseIssue {
 	public Issue_410() {
-		super("Implementação de Matcher.group() é possível?", "Matcher.group()", 410, true);
+		super("Implementação de Matcher.group() é possível?", "Matcher.group()", 410, false);
 	}
 
 	@Override
