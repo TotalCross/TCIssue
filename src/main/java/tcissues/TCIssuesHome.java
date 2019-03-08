@@ -2,22 +2,7 @@ package tcissues;
 
 import java.util.ArrayList;
 
-import tcissues.issues.Issue_350;
-import tcissues.issues.Issue_351;
-import tcissues.issues.Issue_357;
-import tcissues.issues.Issue_369;
-import tcissues.issues.Issue_378;
-import tcissues.issues.Issue_379;
-import tcissues.issues.Issue_380;
-import tcissues.issues.Issue_381;
-import tcissues.issues.Issue_388;
-import tcissues.issues.Issue_389;
-import tcissues.issues.Issue_395;
-import tcissues.issues.Issue_398;
-import tcissues.issues.Issue_402;
-import tcissues.issues.Issue_408;
-import tcissues.issues.Issue_409;
-import tcissues.issues.Issue_410;
+import tcissues.issues.*;
 import tcissues.resources.Colors;
 import tcissues.resources.Exec;
 import tcissues.resources.Images;
@@ -41,6 +26,10 @@ public class TCIssuesHome extends ScrollContainer {
 	
 	public TCIssuesHome() {
 		issues = new ArrayList<BaseIssue>();
+		issues.add(new Issue_310());
+		issues.add(new Issue_316());
+		issues.add(new Issue_320());
+		issues.add(new Issue_331());
 		issues.add(new Issue_336());
 		issues.add(new Issue_346());
 		issues.add(new Issue_347());
