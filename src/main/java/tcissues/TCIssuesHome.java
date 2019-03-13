@@ -46,6 +46,7 @@ public class TCIssuesHome extends ScrollContainer {
 		issues.add(new Issue_389());
 		issues.add(new Issue_395());
 		issues.add(new Issue_398());
+		issues.add(new Issue_401());
 		issues.add(new Issue_402());
 		issues.add(new Issue_408());
 		issues.add(new Issue_409());
@@ -53,7 +54,7 @@ public class TCIssuesHome extends ScrollContainer {
 		issues.add(new Issue_426());
 		issues.add(new Issue_436());
 		issues.add(new Issue_437());
-		
+		issues.add(new Issue_429());
 		closedIssues = new ArrayList<BaseIssue>();
 		for (int i = issues.size() - 1; i >= 0; i--) {
 			if (!issues.get(i).isOpen()) {
