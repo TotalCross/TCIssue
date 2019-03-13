@@ -1,6 +1,7 @@
 package tcissues.issues;
 
 import tcissues.BaseIssue;
+import totalcross.io.ByteArrayStream;
 import totalcross.net.HttpStream;
 import totalcross.net.URI;
 import totalcross.net.ssl.SSLSocketFactory;
@@ -8,7 +9,7 @@ import totalcross.ui.Container;
 
 public class Issue_398 extends BaseIssue {
 	public Issue_398() {
-		super("SSL Connection TC5 RC2", "Connection  Issues", 398, true);
+		super("SSL Connection TC5 RC2", "Connection  Issues", 398, false);
 	}
 
 	@Override
@@ -29,13 +30,10 @@ public class Issue_398 extends BaseIssue {
 
 					HttpStream hs = new HttpStream(new URI(url), options);
 					// content length returns -1
-					System.out.println("" + hs.contentLength);
-					if (hs.contentLength > 0) {
-						byte[] buf = new byte[hs.contentLength];
-						hs.readBytes(buf, 0, hs.contentLength);
-						str = new String(buf);
-					}
-
+					ByteArrayStream bas = new ByteArrayStream(4096);
+					bas.readFully(hs, 10, 2048);
+					String data = new String(bas.getBuffer(), 0, bas.available());
+					System.out.println(data);
 					hs.close();
 				} catch (Exception e) {
 					System.out.println("error " + e);
