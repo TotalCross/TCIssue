@@ -58,7 +58,7 @@ public abstract class BaseIssue {
 	}
 
 	public String getIssuePresentableName() {
-		String name = "#" + getIssueNumber() + " - " + getIssueName();
+		String name = "#" + getIssueNumber() + " - " + getIssueNickname();
 		if (name.length() > 30) {
 			name = name.substring(0, 27) + "...";
 		}

@@ -8,12 +8,14 @@ import totalcross.game.Animation;
 import totalcross.sys.Vm;
 import totalcross.ui.Container;
 import totalcross.ui.Label;
+import totalcross.ui.ProgressBar;
+import totalcross.ui.gfx.Color;
 import totalcross.util.UnitsConverter;
 
 public class Issue_408 extends BaseIssue{
 
 	public Issue_408() {
-		super("Erro ao tentar usar gif no Animation", "ProgressBox Issues", 408, true);
+		super("Erro ao tentar usar gif no Animation", "ProgressBox Issues", 408, false);
 	}
 
 	@Override
@@ -21,7 +23,7 @@ public class Issue_408 extends BaseIssue{
 		return new Container() {
 			@Override
 			public void initUI() {
-				super.initUI(); //To change body of generated methods, choose Tools | Templates.
+				super.initUI();
 				int gap = UnitsConverter.toPixels(DP + 50);
 				Container c = new Container();
 				c.setInsets(gap, gap, gap, gap);
@@ -35,14 +37,20 @@ public class Issue_408 extends BaseIssue{
 				cProgress.setBackColor(0xa5cdfa);
 				c.add(cProgress, LEFT, AFTER + (gap * 2), FILL, gap);
 
-				try {
-					Animation anim = new Animation(Images.getprogressBoxGif(), 80);
-					anim.pauseIfNotVisible = true;
-					cProgress.add(anim, LEFT, TOP, FILL, FILL);
-					anim.start(Animation.LOOPS_UNLIMITED);
-				} catch (Exception ex) {
-					ex.printStackTrace();
-				}
+//				try {
+//					Animation anim = new Animation(Images.getprogressBoxGif(), 80);
+//					anim.pauseIfNotVisible = true;
+//					cProgress.add(anim, LEFT, TOP, FILL, FILL);
+//					anim.start(Animation.LOOPS_UNLIMITED);
+//				} catch (Exception ex) {
+//					ex.printStackTrace();
+//				}
+
+				
+				ProgressBar pb = new ProgressBar();
+				//pb.setEndlessAutomatic();
+				pb.setBackForeColors(Color.getRGB(165, 205, 250), Color.getRGB(0, 118, 255));
+				c.add(pb, LEFT, AFTER + (gap * 2), FILL, 5 + DP);
 
 				c.resizeHeight();
 				resizeHeight();

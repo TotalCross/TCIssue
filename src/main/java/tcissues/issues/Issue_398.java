@@ -28,6 +28,7 @@ public class Issue_398 extends BaseIssue {
 					options.httpType = HttpStream.GET;
 					options.socketFactory = new SSLSocketFactory();
 
+					
 					HttpStream hs = new HttpStream(new URI(url), options);
 					// content length returns -1
 					ByteArrayStream bas = new ByteArrayStream(4096);

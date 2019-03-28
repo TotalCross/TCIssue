@@ -9,7 +9,7 @@ import totalcross.util.regex.Pattern;
 
 public class Issue_426 extends BaseIssue {
 	public Issue_426() {
-		super("Erro ao usar componente Slider", "Slider NPE", 426, true);
+		super("Erro ao usar componente Slider", "Slider NPE", 426, false);
 	}
 
 	@Override

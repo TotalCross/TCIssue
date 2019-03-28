@@ -38,16 +38,16 @@ public class Issue_380 extends BaseIssue {
 				name = name + " aligned text";
 				
 				Button btn = new Button(name, img, alignment, UnitsConverter.toPixels(DP + 4));
-				btn.setBackForeColors(Color.WHITE, Color.BLACK);
-				add(btn, LEFT, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
+				btn.setBackForeColors(Colors.P_200, Color.BLACK);
+				add(btn, CENTER, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
 
-				Button btn2 = new Button(name, img, alignment, UnitsConverter.toPixels(DP + 4));
-				btn2.setBackForeColors(Color.WHITE, Color.BLACK);
-				add(btn2, LEFT, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
+				Button btn2 = new Button("With added spacing", img, alignment, UnitsConverter.toPixels(DP + 16));
+				btn2.setBackForeColors(Colors.P_200, Color.BLACK);
+				add(btn2, CENTER, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
 				
-				Button btn3 = new Button("", img, alignment, UnitsConverter.toPixels(DP + 4));
-				btn3.setBackForeColors(Color.WHITE, Color.BLACK);
-				add(btn3, LEFT, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
+				Button btn3 = new Button("", img, alignment, 0);
+				btn3.setBackForeColors(Colors.P_200, Color.BLACK);
+				add(btn3, CENTER, AFTER + UnitsConverter.toPixels(DP + 50), DP + 300, PREFERRED);
 			}
 		};
 	}

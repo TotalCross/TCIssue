@@ -20,17 +20,17 @@ public class Issue_357 extends BaseIssue{
 
 				Cliente apontamentoInc = new Cliente("","");
 
-				Label txOT = new Label(apontamentoInc.ot != null ? ""+ apontamentoInc.ot : "");
+				Label txOT = new Label(apontamentoInc.ot != null ? "" + apontamentoInc.ot : "");
 				txOT.setForeColor(Color.BLACK);
 				add(txOT, AFTER, SAME, PREFERRED, PREFERRED);
 
 				if (apontamentoInc.idCliente != null){
-					Label txUC = new Label(apontamentoInc.idCliente != null ? "" + apontamentoInc.idCliente :"");
+					Label txUC = new Label(apontamentoInc.idCliente != null ? "" + apontamentoInc.idCliente : "");
 					txUC.setForeColor(Color.BLACK);
 					txUC.align = RIGHT;
 					add(txUC, RIGHT, TOP, PREFERRED, PREFERRED);
 					
-					Label lbUC = new Label("UC:");
+					Label lbUC = new Label("Problems with Empty Labels:");
 					lbUC.setForeColor(Color.BLACK);
 					lbUC.align = RIGHT;
 					add(lbUC, BEFORE, SAME, PREFERRED, PREFERRED, txUC);

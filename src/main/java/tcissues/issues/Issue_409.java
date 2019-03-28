@@ -9,7 +9,7 @@ import totalcross.ui.event.PressListener;
 
 public class Issue_409 extends BaseIssue {
 	public Issue_409() {
-		super("Bugs e requests diversos Gekom", "Gekon Requests", 409, true);
+		super("Bugs e requests diversos Gekom", "Gekon Requests", 409, false);
 	}
 
 	@Override

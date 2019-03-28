@@ -11,7 +11,7 @@ import totalcross.ui.event.PressListener;
 
 public class Issue_395 extends BaseIssue {
 	public Issue_395() {
-		super("Problema no calculo do time zone", "Daylight Bug", 395, true);
+		super("Problema no calculo do time zone", "Daylight Bug", 395, false);
 	}
 
 	@Override

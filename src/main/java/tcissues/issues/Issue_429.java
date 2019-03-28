@@ -10,7 +10,7 @@ import totalcross.util.regex.Pattern;
 
 public class Issue_429 extends BaseIssue {
 	public Issue_429() {
-		super("Erro ninepatch quando usado efeito TranslucentShape no Button", "TrasnlucentShape", 429, true);
+		super("Erro ninepatch quando usado efeito TranslucentShape no Button", "TrasnlucentShape", 429, false);
 	}
 
 	@Override

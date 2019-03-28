@@ -24,7 +24,7 @@ public class Issue_336 extends BaseIssue {
                         .setBaseContainer(new Container() {
                             @Override
                             public void initUI() {
-                                add (email, CENTER, TOP, PREFERRED, PREFERRED);
+                                add(email, LEFT, TOP, FILL, PREFERRED);
                             }
                         })
                         .build();
