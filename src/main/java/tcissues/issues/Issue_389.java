@@ -1,7 +1,6 @@
 package tcissues.issues;
 
 import tcissues.BaseIssue;
-import totalcross.sys.Vm;
 import totalcross.ui.Container;
 import totalcross.ui.Edit;
 

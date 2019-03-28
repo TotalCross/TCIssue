@@ -23,9 +23,11 @@ import totalcross.ui.image.ImageException;
 public class TCIssuesHome extends ScrollContainer {
 	private ArrayList<BaseIssue> issues;
 	private ArrayList<BaseIssue> closedIssues;
-	
+
+
 	public TCIssuesHome() {
 		issues = new ArrayList<BaseIssue>();
+		issues.add(new Issue_290());
 		issues.add(new Issue_310());
 		issues.add(new Issue_316());
 		issues.add(new Issue_320());
@@ -56,6 +58,10 @@ public class TCIssuesHome extends ScrollContainer {
 		issues.add(new Issue_437());
 		issues.add(new Issue_429());
 		issues.add(new Issue_441());
+		issues.add(new Issue_442());
+		issues.add(new Issue_455());
+		issues.add(new Issue_467());
+		issues.add(new Issue_470());
 		closedIssues = new ArrayList<BaseIssue>();
 		for (int i = issues.size() - 1; i >= 0; i--) {
 			if (!issues.get(i).isOpen()) {
