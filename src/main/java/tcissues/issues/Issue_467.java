@@ -2,7 +2,7 @@ package tcissues.issues;
 
 import tcissues.BaseIssue;
 import totalcross.ui.*;
-//import totalcross.ui.event.ScrollEvent;
+import totalcross.ui.event.ScrollEvent;
 
 public class Issue_467 extends BaseIssue {
     public Issue_467() {
