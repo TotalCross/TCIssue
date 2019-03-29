@@ -16,7 +16,7 @@
 		<dependency>
 			<groupId>com.totalcross</groupId>
 			<artifactId>totalcross-sdk</artifactId>
-			<version>5.0.0-RC2</version>
+			<version>5.0.0-RC4</version>
 		</dependency>
 		
 		<dependency>
@@ -53,11 +53,12 @@
 			<plugin>
 				<groupId>net.orfjackal.retrolambda</groupId>
 				<artifactId>retrolambda-maven-plugin</artifactId>
-				<version>2.5.1</version>
+				<version>2.5.6</version>
 				<executions>
 					<execution>
 						<goals>
 							<goal>process-main</goal>
+							<goal>process-test</goal>
 						</goals>
 					</execution>
 				</executions>
