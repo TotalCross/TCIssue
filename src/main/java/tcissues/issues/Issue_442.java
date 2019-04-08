@@ -8,7 +8,7 @@ import totalcross.ui.font.Font;
 
 public class Issue_442 extends BaseIssue {
     public Issue_442() {
-        super("IPhone x Android -> Deslocamento na tela no combobox", "iOSxAndroid-Combo", 442, true);
+        super("IPhone x Android -> Deslocamento na tela no combobox", "iOSxAndroid-Combo", 442, false);
     }
 
     @Override
