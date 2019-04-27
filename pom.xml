@@ -1,11 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>totalcross.tcissues</groupId>
-  <artifactId>TCIssues</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>TCIssues</name>
-  
-  
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>totalcross.tcissues</groupId>
+	<artifactId>TCIssues</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>TCIssues</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,20 +16,17 @@
 		<dependency>
 			<groupId>com.totalcross</groupId>
 			<artifactId>totalcross-sdk</artifactId>
-			<version>5.0.0-RC4</version>
+			<version>5.0.0</version>
 		</dependency>
-		
-		<dependency>
-      		<groupId>org.xerial</groupId>
-      		<artifactId>sqlite-jdbc</artifactId>
-      		<version>3.8.7</version>
-      		<scope>compile</scope>
-    	</dependency>
-		
-	</dependencies>
-	
 
-	
+		<dependency>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.8.7</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
 	<repositories>
 		<repository>
 			<id>totalcross-repo</id>
@@ -37,7 +34,7 @@
 			<url>http://maven.totalcross.com/artifactory/repo1</url>
 		</repository>
 	</repositories>
-	
+
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
@@ -86,7 +83,7 @@
 								<argument>/r</argument>
 								<argument>${totalcross.activation_key}</argument>
 								<argument>/m</argument>
-								<argument>{put ios certificate path here}</argument>								
+								<argument>{put ios certificate path here}</argument>
 							</arguments>
 						</configuration>
 					</execution>
