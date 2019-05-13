@@ -69,6 +69,7 @@ public class TCIssuesHome extends ScrollContainer {
 		issues.add(new Issue_476());
 		issues.add(new Issue_479());
 		issues.add(new Issue_480());
+		issues.add(new Issue_485());
 		issues.add(new Issue_486());
 		issues.add(new Issue_487());
 		issues.add(new Issue_488());
