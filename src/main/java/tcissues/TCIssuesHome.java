@@ -81,6 +81,7 @@ public class TCIssuesHome extends ScrollContainer {
 		issues.add(new Issue_506());
 		issues.add(new Issue_509());
 		issues.add(new Issue_512());
+		issues.add(new Issue_532());
 		closedIssues = new ArrayList<BaseIssue>();
 		for (int i = issues.size() - 1; i >= 0; i--) {
 			if (!issues.get(i).isOpen()) {
